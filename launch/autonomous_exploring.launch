@@ -1,0 +1,8 @@
+<launch>
+	<node name="autonomous_exploring" pkg="autonomous_exploring" type="autonomous_exploring" respawn="false" output="screen" clear_params="true">	    
+		<rosparam command="load" file="$(find autonomous_exploring)/launch/autonomous_exploring.yaml"/>
+		<remap from="/autonomous_exploring/setGoal" to="/move_base_simple/goal" />
+		<remap from="/autonomous_exploring/getPose" to="/mavros/local_position/pose"/>
+		<remap from="/autonomous_exploring/getStatusMission" to="/mission_uav_assign/statusMission"/>
+	</node>
+</launch>

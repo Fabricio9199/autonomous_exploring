@@ -1,0 +1,6 @@
+pathsrvOctomapFull: "/octomap_full"
+pathsrvOctomapBinary: "/octomap_binary"
+pathsrvSetGoal: "/mission_uav_assign/srvSetPoint"
+pathSubMap: "/octomap_binary"
+replan: false #when UAV found a obstacle we can replan a new path to the goal
+usePathApproximate: false #used when we can use a partial path
